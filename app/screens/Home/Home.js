@@ -20,6 +20,7 @@ export default class Home extends Component {
     };
 
     render() {
+        const {navigate} = this.props.navigation;
         return (
             <View style={style.container}>
                 <View style={style.header}>
@@ -27,7 +28,7 @@ export default class Home extends Component {
                 </View>
                 <View style={style.contents}>
                     <View style={style.buttonView}>
-                        <Button color="#B5C596" title="Add Groceries" onPress={() => this.handleRedirect('add groceries')}/>
+                        <Button color="#B5C596" title="Add Groceries" onPress={() => navigate('AddGroceries')}/>
                     </View>
                     <View style={style.buttonView}>
                         <Button color="#B5C596" title="Remove Groceries" onPress={() => this.handleRedirect('remove groceries')}/>
